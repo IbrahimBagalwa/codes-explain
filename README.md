@@ -35,6 +35,6 @@ Feel free to contribute to the project by submitting bug reports, feature reques
 
 ## Feedback and Support
 
-If you encounter any issues, have suggestions, or need assistance, please create an issue on the GitHub repository. Your feedback is crucial for the continuous improvement of Code Explorer.
+If you encounter any issues, have suggestions, or need assistance, please create an issue on the GitHub repository. Your feedback is crucial for the continuous improvement of Code Explain.
 
 Happy coding! 🚀
