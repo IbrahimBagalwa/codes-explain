@@ -29,7 +29,7 @@ test("Should display repository link", async () => {
   // this is one way of avoiding the warning 'act' function
   await screen.findAllByRole("img", { name: /javascript/i });
 
-  const link = screen.getByRole("link");
+  const link = screen.getByRole("link", { name: /github repository/i });
   expect(link).toHaveAttribute("href", repository.html_url);
 });
 

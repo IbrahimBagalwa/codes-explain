@@ -1,9 +1,10 @@
 import { Link } from "react-router-dom";
 import FileIcon from "../tree/FileIcon";
 import RepositoriesSummary from "./RepositoriesSummary";
-
+import { MarkGithubIcon } from "@primer/octicons-react";
 function RepositoriesListItem({ repository }) {
-  const { full_name, language, description, owner, name } = repository;
+  const { full_name, language, description, owner, name, html_url } =
+    repository;
 
   return (
     <div className='py-3 border-b flex'>
@@ -15,13 +16,16 @@ function RepositoriesListItem({ repository }) {
         <p className='text-gray-500 italic py-1'>{description}</p>
         <RepositoriesSummary repository={repository} />
       </div>
-      {/* <div
-        className='self-center absolute right-12'
-        to='https://reactrouter.com/en/main/components/link-native'
-        target='_blank'
-      >
-        Repository link
-      </div> */}
+      <div className='grow flex items-center justify-end pr-2'>
+        <a
+          href={html_url}
+          target='_blank'
+          rel='noreferrer'
+          aria-label='github repository'
+        >
+          <MarkGithubIcon />
+        </a>
+      </div>
     </div>
   );
 }
