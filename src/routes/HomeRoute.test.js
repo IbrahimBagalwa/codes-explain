@@ -50,5 +50,9 @@ test("Should renders two links for each language", async () => {
       name: new RegExp(`${language}_`),
     });
     expect(links).toHaveLength(2);
+    expect(links[0]).toHaveTextContent(`${language}_one`);
+    expect(links[1]).toHaveTextContent(`${language}_two`);
+    expect(links[0]).toHaveAttribute("href", `/repositories/${language}_one`);
+    expect(links[1]).toHaveAttribute("href", `/repositories/${language}_two`);
   }
 });
